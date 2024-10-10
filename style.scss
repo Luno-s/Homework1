@@ -22,27 +22,16 @@ body {
 
 .top {
     background: rgb(225, 255, 143);
-    background-image: url(img/group-head-bg.svg);
+    background-image:url(img/bg-head-l.svg), url(img/bg-head-r.svg);
     background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-position: -15% 80%;
-    background-size: auto;
+    background-position: 5% 69px, top -350px right -480px;
+    background-attachment: fixed;
     height: 710px;
     color: rgb(32, 32, 39);
     font-family: inherit;
     letter-spacing: 0px;
     text-align: left;
-
     position: relative;
-
-    // &__bg {
-    //     &_svg-left {
-    //         position: absolute;
-    //         top: 69px;
-    //         left: 7% ;
-    //     }
-    // }
 
     &__content {
         width: 768px;
@@ -57,6 +46,7 @@ body {
         font-size: 64px;
         font-weight: 700;
         line-height: 78px;
+        z-index: 2;
     }
 
     &__text {
@@ -64,6 +54,7 @@ body {
         font-weight: 400;
         line-height: 32px;
         padding-bottom: 24px;
+        z-index: 2;
     }
 
     &__btn {
@@ -80,6 +71,7 @@ body {
         padding: 16px 28px;
         width: 247px;
         cursor: pointer;
+        z-index: 2;
 
         &:hover {
             background: rgb(255, 255, 255);
@@ -91,48 +83,7 @@ body {
 .line {
     background: rgb(188, 236, 48);
     height: 90px;
-}
-
-.about {
-    background: rgb(32, 32, 39);
-    &__content {
-        padding-top: 94px;
-        padding-bottom: 50px;
-    }
-
-    &__head {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        align-items: flex-start;
-        color: rgb(255, 255, 255);
-        font-family: inherit;
-        text-align: left;
-        gap: 24px;
-        padding-bottom: 72px;
-    }
-
-    &__game {
-        &-box {
-            display: grid;
-            grid-template-columns: repeat(12, 1fr);
-            gap: 32px;
-            height: 1056px;
-        }
-
-        &-long {
-            height: calc(100% + 32px);
-        }
-
-        &-short {
-            margin-top: 32px;
-        }
-
-        grid-column: span 4;
-        background-color: rgb(255, 255, 255);
-        border-radius: 30px;
-        transition: all 0.5s;
-    }
+    z-index: 2;
 }
 
 .head {
@@ -152,6 +103,139 @@ body {
     }
 }
 
+.about {
+    background: rgb(32, 32, 39);
+    background-image: url(img/bg-about-l.svg), url(img/bg-about-r.svg);
+    background-repeat: no-repeat;
+    background-position: 25px 770px, top 100px right -110px;
+
+    &__content {
+        padding-top: 94px;
+        padding-bottom: 50px;
+    }
+
+    &__head {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        color: rgb(255, 255, 255);
+        font-family: inherit;
+        text-align: left;
+        gap: 24px;
+        padding-bottom: 72px;
+    }
+
+
+    &__game {
+        background-color: rgb(255, 255, 255);
+        box-shadow: 0px 12.61px 42.25px -7.57px rgba(0, 0, 0, 0.13);
+        min-height: 473px;
+        border-radius: 30px;
+        color: rgb(32, 32, 39);
+        font-family: inherit;
+        text-align: left;
+        transition: all 0.5s;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: none;
+        }
+
+        &-box {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+
+        &_column {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+        }
+
+        &_img {
+            border-radius: 30px;
+            height: 314px;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        &_content {
+            display: flex;
+            gap: 16px;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 32px 32px 36px 32px;
+        }
+
+        &_number {
+            border-radius: 52.58px;
+            background: rgb(247, 247, 247);
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 110%;
+            width: 108px;
+            padding: 8px 16px;
+        }
+        
+        &_name {
+            font-size: 32px;
+            font-weight: 700;
+            line-height: 39px;
+        }
+    }
+
+    
+}
+
+.game {
+    &_img {
+        background-repeat: no-repeat;
+        background-position: center;
+
+        &-1 {
+            background-color: rgb(173, 97, 255);
+            background-image: url(img/bg-game-1.svg);
+        }
+
+        &-2 {
+            background-color: rgb(253, 173, 0);
+            background-image: url(img/bg-game-2.svg);
+        }
+
+        &-3 {
+            background-color: rgb(86, 94, 239);
+            background-image: url(img/bg-game-3.svg);
+        }
+
+        &-4 {
+            background-color: rgb(39, 26, 88);
+            background-image: url(img/bg-game-4.svg);
+            position: relative;
+
+            &-c {
+                font-size: 82px;
+                transform: rotate(10deg);
+                position: absolute;
+                left: 135px;
+                top: 100px;
+            }
+        }
+
+        &-5 {
+            background-color: rgb(153, 209, 0);
+            background-image: url(img/bg-game-5.svg);
+        }
+
+        &-6 {
+            background-color: rgb(39, 26, 88);
+            background-image: url(img/bg-game-6.svg);
+        }
+    }
+}
+
+
 .footer {
     background: rgb(189, 237, 53);
     min-height: 150px;
@@ -167,5 +251,13 @@ body {
         line-height: 29px;
         letter-spacing: 0px;
     }
+}
+
+button, .about__game {
+    transition: all 0.5s;
+}
+
+button:hover, .about__game:hover {
+    transform: scale(1.1);
 }
 

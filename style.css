@@ -22,12 +22,10 @@ body {
 
 .top {
   background: rgb(225, 255, 143);
-  background-image: url(img/group-head-bg.svg);
+  background-image: url(img/bg-head-l.svg), url(img/bg-head-r.svg);
   background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-position: -15% 80%;
-  background-size: auto;
+  background-position: 5% 69px, top -350px right -480px;
+  background-attachment: fixed;
   height: 710px;
   color: rgb(32, 32, 39);
   font-family: inherit;
@@ -47,12 +45,14 @@ body {
   font-size: 64px;
   font-weight: 700;
   line-height: 78px;
+  z-index: 2;
 }
 .top__text {
   font-size: 24px;
   font-weight: 400;
   line-height: 32px;
   padding-bottom: 24px;
+  z-index: 2;
 }
 .top__btn {
   border: 1px solid rgb(32, 32, 39);
@@ -68,6 +68,7 @@ body {
   padding: 16px 28px;
   width: 247px;
   cursor: pointer;
+  z-index: 2;
 }
 .top__btn:hover {
   background: rgb(255, 255, 255);
@@ -77,10 +78,28 @@ body {
 .line {
   background: rgb(188, 236, 48);
   height: 90px;
+  z-index: 2;
+}
+
+.head_title {
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 78px;
+  letter-spacing: 0px;
+}
+.head_text {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 0px;
+  width: 788px;
 }
 
 .about {
   background: rgb(32, 32, 39);
+  background-image: url(img/bg-about-l.svg), url(img/bg-about-r.svg);
+  background-repeat: no-repeat;
+  background-position: 25px 770px, top 100px right -110px;
 }
 .about__content {
   padding-top: 94px;
@@ -98,36 +117,92 @@ body {
   padding-bottom: 72px;
 }
 .about__game {
-  grid-column: span 4;
   background-color: rgb(255, 255, 255);
+  box-shadow: 0px 12.61px 42.25px -7.57px rgba(0, 0, 0, 0.13);
+  min-height: 473px;
   border-radius: 30px;
+  color: rgb(32, 32, 39);
+  font-family: inherit;
+  text-align: left;
   transition: all 0.5s;
+  text-decoration: none;
+}
+.about__game:hover {
+  text-decoration: none;
 }
 .about__game-box {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 32px;
-  height: 1056px;
 }
-.about__game-long {
-  height: calc(100% + 32px);
+.about__game_column {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
 }
-.about__game-short {
-  margin-top: 32px;
+.about__game_img {
+  border-radius: 30px;
+  height: 314px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.about__game_content {
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 32px 32px 36px 32px;
+}
+.about__game_number {
+  border-radius: 52.58px;
+  background: rgb(247, 247, 247);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 110%;
+  width: 108px;
+  padding: 8px 16px;
+}
+.about__game_name {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 39px;
 }
 
-.head_title {
-  font-size: 64px;
-  font-weight: 700;
-  line-height: 78px;
-  letter-spacing: 0px;
+.game_img {
+  background-repeat: no-repeat;
+  background-position: center;
 }
-.head_text {
-  font-size: 24px;
-  font-weight: 400;
-  line-height: 32px;
-  letter-spacing: 0px;
-  width: 788px;
+.game_img-1 {
+  background-color: rgb(173, 97, 255);
+  background-image: url(img/bg-game-1.svg);
+}
+.game_img-2 {
+  background-color: rgb(253, 173, 0);
+  background-image: url(img/bg-game-2.svg);
+}
+.game_img-3 {
+  background-color: rgb(86, 94, 239);
+  background-image: url(img/bg-game-3.svg);
+}
+.game_img-4 {
+  background-color: rgb(39, 26, 88);
+  background-image: url(img/bg-game-4.svg);
+  position: relative;
+}
+.game_img-4-c {
+  font-size: 82px;
+  transform: rotate(10deg);
+  position: absolute;
+  left: 135px;
+  top: 100px;
+}
+.game_img-5 {
+  background-color: rgb(153, 209, 0);
+  background-image: url(img/bg-game-5.svg);
+}
+.game_img-6 {
+  background-color: rgb(39, 26, 88);
+  background-image: url(img/bg-game-6.svg);
 }
 
 .footer {
@@ -144,4 +219,12 @@ body {
   font-weight: 600;
   line-height: 29px;
   letter-spacing: 0px;
+}
+
+button, .about__game {
+  transition: all 0.5s;
+}
+
+button:hover, .about__game:hover {
+  transform: scale(1.1);
 }/*# sourceMappingURL=style.css.map */
