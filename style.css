@@ -70,10 +70,6 @@ body {
   cursor: pointer;
   z-index: 2;
 }
-.top__btn:hover {
-  background: rgb(255, 255, 255);
-  color: rgb(0, 0, 0);
-}
 
 .line {
   background: rgb(188, 236, 48);
@@ -100,6 +96,7 @@ body {
   background-image: url(img/bg-about-l.svg), url(img/bg-about-r.svg);
   background-repeat: no-repeat;
   background-position: 25px 770px, top 100px right -110px;
+  border-bottom: 0.5px solid rgb(70, 87, 18);
 }
 .about__content {
   padding-top: 94px;
@@ -125,10 +122,6 @@ body {
   font-family: inherit;
   text-align: left;
   transition: all 0.5s;
-  text-decoration: none;
-}
-.about__game:hover {
-  text-decoration: none;
 }
 .about__game-box {
   display: grid;
@@ -168,9 +161,45 @@ body {
   line-height: 39px;
 }
 
+.mini-game {
+  background: rgb(32, 32, 39);
+  background-image: url(img/bg-game-top.svg), url(img/bg-game-bot.svg);
+  background-repeat: no-repeat;
+  background-position: top 93px right 45px, bottom 45px right 52px;
+}
+.mini-game__content {
+  padding-top: 46px;
+  padding-bottom: 144px;
+}
+.mini-game__head {
+  color: rgb(255, 255, 255);
+  font-family: inherit;
+  text-align: left;
+  padding-bottom: 72px;
+}
+
+.game {
+  background-color: rgb(255, 255, 255);
+  border-radius: 30px;
+  box-shadow: 0px 20px 67px -12px rgba(0, 0, 0, 0.13);
+  height: 500px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  color: rgb(32, 32, 39);
+  font-family: inherit;
+  text-align: left;
+}
+.game__info {
+  padding: 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
 .game_img {
   background-repeat: no-repeat;
   background-position: center;
+  background-size: 150%;
+  border-radius: 30px;
 }
 .game_img-1 {
   background-color: rgb(173, 97, 255);
@@ -187,14 +216,17 @@ body {
 .game_img-4 {
   background-color: rgb(39, 26, 88);
   background-image: url(img/bg-game-4.svg);
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .game_img-4-c {
   font-size: 82px;
   transform: rotate(10deg);
-  position: absolute;
-  left: 135px;
-  top: 100px;
+}
+.game_img-4-t {
+  font-size: 128px;
+  transform: rotate(10deg);
 }
 .game_img-5 {
   background-color: rgb(153, 209, 0);
@@ -203,6 +235,37 @@ body {
 .game_img-6 {
   background-color: rgb(39, 26, 88);
   background-image: url(img/bg-game-6.svg);
+}
+.game-box {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  gap: 32px;
+}
+.game__title {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 59px;
+}
+.game__text {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
+}
+.game__btn {
+  border-radius: 60px;
+  background: rgb(32, 32, 39);
+  border: 1px solid rgb(32, 32, 39);
+  color: rgb(255, 255, 255);
+  font-family: inherit;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 141.69%;
+  letter-spacing: 0%;
+  text-align: center;
+  padding: 16px 28px;
+  width: 247px;
+  margin-top: 12px;
 }
 
 .footer {
@@ -227,4 +290,10 @@ button, .about__game {
 
 button:hover, .about__game:hover {
   transform: scale(1.1);
+}
+
+button:hover {
+  background: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */
